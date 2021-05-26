@@ -22,36 +22,7 @@
           font-size:medium;
         }
         
-        h3{
-                position:relative;
-                font-size: 8em;
-                Letter-spacing: 15px;
-                color: #9e1a1a;
-                text-transform: uppercase;
-                width: 100%;
-                text-align: center;
-                -webkit-box-reflect:below 1px linear-gradient(transparent,#0004);
-                outline:none;
-                Line-height:0.70em;
-                animation:animate 3s linear infinite;
-
-            }
-            @keyframes animate{
-                0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
-                {
-                    color: #9e1a1a;
-                    text-shadow: none;
-                }
-                18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%
-                {
-                    color: #fff;
-                    text-shadow: 0 0 10px #9e1a1a,
-                    0 0 20px #9e1a1a,
-                    0 0 40px #9e1a1a,
-                    0 0 80px #9e1a1a,
-                    0 0 160px #9e1a1a;
-                }
-            }
+        
             .container{
     
     background: url("https://wallpaperaccess.com/full/1595952.jpg");
@@ -103,7 +74,7 @@
 
           
            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-           <h3><b>STAFFS</b></h3>
+           
                <br><br><br><br><br>
                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                <div class="row">
@@ -206,7 +177,7 @@
         </div>
         <div class="form-group">
         <label for="">Date of joining</label>
-        <input type="text" name="sdoj" id="" value="{{ $staff->sdoj }}" class="form-control">
+        <input type="date" name="sdoj" id="" value="{{ $staff->sdoj }}" class="form-control">
         </div>
       </div>
       <div class="modal-footer">
@@ -281,7 +252,7 @@
         </div>
         <div class="form-group">
         <label for="">Date of joining</label>
-        <input type="text" name="sdoj" id="" class="form-control">
+        <input type="date" name="sdoj" id="" class="form-control">
         </div>
       </div>
       <div class="modal-footer">
