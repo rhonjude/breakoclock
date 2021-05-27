@@ -94,7 +94,7 @@
            <tbody>
            @foreach ($orders as $orders)
            <tr>
-             <td>{{ $orders->oid }}</td>
+             <td>{{ $orders->id }}</td>
              <td>{{ $orders->user_id }}</td>
              <td>{{ $orders->address }}</td>
              <td>{{ $orders->email }}</td>
@@ -105,13 +105,13 @@
              
              
              
-              <input type="hidden" name="order_id" value={{$orders->oid}}>
+              <input type="hidden" name="order_id" value={{$orders->id}}>
              
              
            
             
-             <td><a href="/paymentstatus/{{$orders->oid}}" class ="btn btn-success" >OrderDone</a></td>
-             <td><a href="/ordercancel/{{$orders->oid}}" class ="btn btn-danger" >CancelOrder</a></td>
+             <td><a href="/paymentstatus/{{$orders->id}}" class ="btn btn-success" >OrderDone</a></td>
+             <td><a href="/ordercancel/{{$orders->id}}" class ="btn btn-danger" >CancelOrder</a></td>
              
           
            </tr>

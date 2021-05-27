@@ -175,7 +175,7 @@ class productviewController extends Controller
     {
         
         DB::table('orders')
-              ->where('orders.oid', $id)
+              ->where('orders.id', $id)
               ->update(['payment_status' => 'paid']);
               
               return redirect('/orderviewadmin');
@@ -184,7 +184,7 @@ class productviewController extends Controller
     function orderCancel($id)
     {
         DB::table('orders')
-        ->where('orders.oid',$id)
+        ->where('orders.id',$id)
         ->delete();
         return redirect('/orderviewadmin');
     }
