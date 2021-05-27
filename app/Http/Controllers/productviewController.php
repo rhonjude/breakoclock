@@ -10,6 +10,9 @@ use App\Models\Cart;
 use App\Models\Order;
 use App\Models\Salesdone;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+
+
 use Session;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
