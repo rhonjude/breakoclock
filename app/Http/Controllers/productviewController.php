@@ -31,7 +31,7 @@ class productviewController extends Controller
         }
         else
         {
-            return view('productview.index',['product'=>$product],compact('catlist'));
+            return view('productview.index',['product'=>$product]);
 
         }
 
