@@ -70,7 +70,7 @@ class productviewController extends Controller
     {   $user=auth()->user();
         $userId=$user->id;
         $products= DB::table('cart')
-        ->join('products','cart.product_id','=','products.pid')
+        ->join('products','cart.product_id','=','products.id')
         ->where('cart.user_id',$userId)
         ->select('products.*','cart.id as cart_id')
         ->get();
@@ -89,7 +89,7 @@ class productviewController extends Controller
         $user=auth()->user();
         $userId=$user->id;
       $total= DB::table('cart')
-        ->join('products','cart.product_id','=','products.pid')
+        ->join('products','cart.product_id','=','products.id')
         ->where('cart.user_id',$userId)
         ->sum(DB::raw('products.price * cart.quantity'));
     
@@ -128,11 +128,11 @@ class productviewController extends Controller
         $user=auth()->user();
         $userId=$user->id;
         $orders= DB::table('orders')
-        ->join('products','orders.product_id','=','products.pid')
+        ->join('products','orders.product_id','=','products.id')
         ->where('orders.user_id',$userId)
         ->get();
         $total= DB::table('orders')
-        ->join('products','orders.product_id','=','products.pid')
+        ->join('products','orders.product_id','=','products.id')
         ->where('orders.user_id',$userId)
         ->sum(DB::raw('products.price * orders.quantity'));
 
@@ -154,7 +154,7 @@ class productviewController extends Controller
        
         $orders=DB::table('orders')
         ->join('users','orders.user_id','=','users.id')
-        ->join('products','products.pid','=','orders.product_id')
+        ->join('products','products.id','=','orders.product_id')
         ->where('orders.payment_status','=','pending')
         ->get();
        
@@ -193,12 +193,12 @@ class productviewController extends Controller
     {
         $orders=DB::table('users')
         ->join('orders','orders.user_id','=','users.id')
-        ->join('products','products.pid','=','orders.product_id')
+        ->join('products','products.id','=','orders.product_id')
         ->where('orders.payment_status','=','paid')
         ->get();
        
         $total= DB::table('orders')
-        ->join('products','orders.product_id','=','products.pid')
+        ->join('products','orders.product_id','=','products.id')
         ->where('orders.payment_status','=','paid')
         ->sum(DB::raw('products.price * orders.quantity'));
 

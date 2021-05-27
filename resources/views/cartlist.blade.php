@@ -79,7 +79,7 @@
            <tbody>
            @foreach ($products as $product)
            <tr>
-             <td>{{ $product->pid }}</td>
+             <td>{{ $product->id }}</td>
              <td>{{ $product->product_name }}</td>
              
              <td>{{ $product->description }}</td>
@@ -95,7 +95,7 @@
              <div class="btn-group">
              <form action="/add_to_cart" method="post">
              @csrf
-              <input type="hidden" name="product_id" value={{$product->pid}}>
+              <input type="hidden" name="product_id" value={{$product->id}}>
              
              </form>
              

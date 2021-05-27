@@ -85,7 +85,7 @@ $total=productviewController::cartItem();
            <tbody>
            @foreach ($product as $product)
            <tr>
-             <td>{{ $product->pid }}</td>
+             <td>{{ $product->id }}</td>
              <td><img src="{{ asset('uploads/product/' . $product->pimage) }}" alt="image" width="200px;" height="200px;"></td>
              <td>{{ $product->product_name }}</td>
              
@@ -98,7 +98,7 @@ $total=productviewController::cartItem();
              <div class="btn-group">
              <form action="/add_to_cart" method="post">
              @csrf
-              <input type="hidden" name="product_id" value={{$product->pid}}>
+              <input type="hidden" name="product_id" value={{$product->id}}>
               <input type="number" id="quantity" name="quantity">
              <input type="submit" value="Add to Cart">
              </form>

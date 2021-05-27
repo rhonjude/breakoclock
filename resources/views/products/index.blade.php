@@ -78,7 +78,7 @@
            <tbody>
            @foreach ($product as $product)
            <tr>
-             <td>{{ $product->pid }}</td>
+             <td>{{ $product->id }}</td>
              <td><img src="{{ asset('uploads/product/' . $product->pimage) }}" alt="image" width="200px;" height="200px;"></td>
              <td>{{ $product->product_name }}</td>
              @foreach($catlist as $item)   
@@ -97,15 +97,15 @@
              </td>
            </tr>
 
-           <div class="modal" id="deleteProduct{{ $product->pid }}" tabindex="-1">
+           <div class="modal" id="deleteProduct{{ $product->id }}" tabindex="-1">
 <div class="modal-dialog">
 <div class="modal-content">
   
   <div class="modal-body">
-  <form action="{{ route('products.destroy',$product->pid) }}" method="post">
+  <form action="{{ route('products.destroy',$product->id) }}" method="post">
     @csrf
     @method('delete')
-    <p>Are you sure you want to delete {{ ($product->pid) }} ?</p>
+    <p>Are you sure you want to delete {{ ($product->id) }} ?</p>
   </div>
   <div class="modal-footer">
     <button  class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -116,7 +116,7 @@
 </form>
 </div>
 <!-- Modal of staffEdit -->
-<div class="modal right fade" id="editProduct{{ $product->pid }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal right fade" id="editProduct{{ $product->id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 <div class="modal-dialog">
  <div class="modal-content">
   <div class="modal-header">
@@ -125,7 +125,7 @@
     {{ $product->id }}
   </div>
   <div class="modal-body">
-   <form action="{{ route('products.update',$product->pid) }}" method="post">
+   <form action="{{ route('products.update',$product->id) }}" method="post">
     @csrf
     @method('put')
     <div class="form-group">
