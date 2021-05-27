@@ -9,6 +9,7 @@ use App\Models\category;
 use App\Models\Cart;
 use App\Models\Order;
 use App\Models\Salesdone;
+use App\Models\User;
 use Session;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
