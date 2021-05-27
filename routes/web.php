@@ -30,12 +30,12 @@ Route::group(['middleware' => 'auth'],function(){
 
 Route::get('redirects','HomeController@index');
 
-Route::resource('/products','App\Http\Controllers\ProductController');
-Route::resource('/suppliers','App\Http\Controllers\SupplierController');
-Route::resource('/staffs','App\Http\Controllers\StaffController');
-Route::resource('/companies','App\Http\Controllers\CompanyController');
-Route::resource('/transactions','App\Http\Controllers\TransactionController');
-Route::resource('/categories','App\Http\Controllers\CategoryController');
+Route::resource('/products','ProductController');
+Route::resource('/suppliers','SupplierController');
+Route::resource('/staffs','StaffController');
+Route::resource('/companies','CompanyController');
+Route::resource('/transactions','TransactionController');
+Route::resource('/categories','CategoryController');
 Route::resource('/productviews','productviewController');
 Route::post('/add_to_cart',[productviewController::class,'addToCart']);
 Route::get('/cartlist',[productviewController::class,'cartList']);
