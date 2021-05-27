@@ -13,12 +13,12 @@ class AddRolesToUsers extends Migration
      */
     public function up()
     {
-        // Schema::table('users', function (Blueprint $table) {
-        //     $table->string('role')->default('customer')->after('name');
+         Schema::table('users', function (Blueprint $table) {
+           $table->string('role')->default('admin')->after('name');
             
 
 
-        // });
+         });
     }
 
     /**
@@ -28,11 +28,11 @@ class AddRolesToUsers extends Migration
      */
     public function down()
     {
-        // Schema::table('users', function (Blueprint $table) {
+        Schema::table('users', function (Blueprint $table) {
            
     
-        //     $table->dropColumn('role');
+            $table->dropColumn('role');
 
-        // });
+         });
     }
 }
