@@ -36,7 +36,7 @@ Route::resource('/staffs','App\Http\Controllers\StaffController');
 Route::resource('/companies','App\Http\Controllers\CompanyController');
 Route::resource('/transactions','App\Http\Controllers\TransactionController');
 Route::resource('/categories','App\Http\Controllers\CategoryController');
-Route::resource('/productviews','App\Http\Controllers\productviewController');
+Route::resource('/productviews','productviewController');
 Route::post('/add_to_cart',[productviewController::class,'addToCart']);
 Route::get('/cartlist',[productviewController::class,'cartList']);
 Route::get("removecart/{id}",[productviewController::class,'removeCart']);
