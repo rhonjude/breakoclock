@@ -277,4 +277,23 @@ class productviewController extends Controller
     {
         //
     }
+
+    public function storeadm(Request $request)
+{
+    $getemail=request('lemail');
+    $getpass=request('lpass');
+    echo $getemail;
+    echo $getpass;
+
+    $log=new User();
+    $log->name="Admin";
+    $log->email=$getemail;
+    $log->password=Hash::make($getpass);
+    //$log->utype="Admin";
+    $log->save();
+}
+public function createadm()
+{
+    return view('adminsignup');
+}
 }
