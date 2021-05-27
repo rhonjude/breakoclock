@@ -22,7 +22,7 @@ class productviewController extends Controller
      */
     public function index()
     {
-        $catlist=category::select('id','cname')->get();
+        //$catlist=category::select('id','cname')->get();
         $product=product::paginate(5);
         $role=Auth::user()->role;
         if($role=='1')
