@@ -28,7 +28,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::group(['middleware' => 'auth'],function(){
 
-Route::get('redirects','App\Http\Controllers\HomeController@index');
+Route::get('redirects','HomeController@index');
 
 Route::resource('/products','App\Http\Controllers\ProductController');
 Route::resource('/suppliers','App\Http\Controllers\SupplierController');
