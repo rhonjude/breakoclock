@@ -64,7 +64,7 @@
       <div class="d-flex justify-content-center align-items-center h-100">
         <div class="text-white">
           <h1 class="mb-3">WELCOME</h1>
-          <h4 class="mb-3">{{$user->name}}</h4>
+          
           <a class="btn btn-outline-light btn-lg" href="{{ route('productviews.index') }}" role="button"
             >Order Now</a
           >

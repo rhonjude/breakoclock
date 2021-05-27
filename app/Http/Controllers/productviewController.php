@@ -9,10 +9,6 @@ use App\Models\category;
 use App\Models\Cart;
 use App\Models\Order;
 use App\Models\Salesdone;
-use App\Models\User;
-use Illuminate\Support\Facades\Hash;
-
-
 use Session;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -115,7 +111,6 @@ class productviewController extends Controller
             $order->user_id=$cart['user_id'];
             $order->user_id=$cart['user_id'];
             $order->quantity=$cart['quantity'];
-            $order->payment_method=$req->payment;
             $order->payment_status="pending";
             $order->address=$req->address;
 
@@ -281,23 +276,4 @@ class productviewController extends Controller
     {
         //
     }
-
-    public function storeadm(Request $request)
-{
-    $getemail=request('lemail');
-    $getpass=request('lpass');
-    echo $getemail;
-    echo $getpass;
-
-    $log=new User();
-    $log->name="Admin";
-    $log->email=$getemail;
-    $log->password=Hash::make($getpass);
-    //$log->utype="Admin";
-    $log->save();
-}
-public function createadm()
-{
-    return view('adminsignup');
-}
 }

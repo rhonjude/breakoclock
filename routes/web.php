@@ -13,8 +13,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/signup','productviewController@createadm');
-    Route::post('/ReadAdmin','productviewController@storeadm');
 
 Route::group(['middleware' => 'prevent-back-history'],function(){
     
