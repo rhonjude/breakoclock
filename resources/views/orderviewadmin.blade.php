@@ -23,7 +23,7 @@
         }
         .container{
     
-    background: url("https://wallpaperaccess.com/full/1595952.jpg");
+    background: url("https://images.pexels.com/photos/1855214/pexels-photo-1855214.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
     background-repeat: no-repeat;
     width:100%;
     height:100vh;         
