@@ -197,6 +197,7 @@ class productviewController extends Controller
         $orders=DB::table('users')
         ->join('orders','orders.user_id','=','users.id')
         ->join('products','products.id','=','orders.product_id')
+        ->select('orders.*','products.product_name','products.price','users.email')
         ->where('orders.payment_status','=','paid')
         ->get();
        
