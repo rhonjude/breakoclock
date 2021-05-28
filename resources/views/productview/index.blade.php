@@ -75,7 +75,7 @@ $total=productviewController::cartItem();
              <td>product_id</td> 
              <td></td> 
              <td>Product Name</td>
-             
+             <td>Category</td>
              <td>Description</td>
              <td>price</td>
              
@@ -88,7 +88,7 @@ $total=productviewController::cartItem();
              <td>{{ $product->id }}</td>
              <td><img src="{{ asset('uploads/product/' . $product->pimage) }}" alt="image" width="200px;" height="200px;"></td>
              <td>{{ $product->product_name }}</td>
-             
+             <td>{{$catlist->cname}}</td>
              <td>{{ $product->description }}</td>
              <td>{{ $product->price }}</td>
              

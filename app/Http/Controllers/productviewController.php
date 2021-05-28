@@ -22,7 +22,8 @@ class productviewController extends Controller
      */
     public function index()
     {
-        //$catlist=category::select('id','cname')->get();
+        $catlist=DB::table('categories')
+        ->join('products','products.cid','categories.id')
         $product=product::paginate(5);
         $role=Auth::user()->role;
         if($role=='1')
@@ -31,7 +32,7 @@ class productviewController extends Controller
         }
         else
         {
-            return view('productview.index',['product'=>$product]);
+            return view('productview.index',['product'=>$product],compact('catlist'));
 
         }
 
