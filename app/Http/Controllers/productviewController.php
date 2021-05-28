@@ -166,7 +166,7 @@ class productviewController extends Controller
         $role=$user->role;
         if($role==1)
         {
-            dd($orders);
+            
             return view('orderviewadmin',['orders'=>$orders]);
         }
         else
