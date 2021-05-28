@@ -95,11 +95,14 @@ h3{
         <div class="text-white">
           <h1 class="mb-3">WELCOME <br>TO</h1>
           <h3><b>BREAK O'CLOCK</b></h3>
-          <a class="btn btn-outline-light btn-lg" href="{{ route('productviews.index') }}" role="button"
-            >Order Now</a
-          >
+          
         </div>
       </div>
+    </div>
+    <div class="d-flex justify-content-center align-items-center h-100">
+    <a class="btn btn-outline-light btn-lg" href="{{ route('productviews.index') }}" role="button"
+            >Order Now</a
+          >
     </div>
   </div>
   <!-- Background image -->
