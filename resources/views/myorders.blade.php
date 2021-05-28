@@ -14,9 +14,10 @@
           color:rgb(255, 255, 255);
           font-size:medium;
         }
+        
         .container{
     
-    background: url("https://wallpapercave.com/wp/wp6751201.jpg");
+    background: url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
     background-repeat: no-repeat;
     width:100%;
     height:100vh;         
@@ -69,7 +70,7 @@
            <tr>
              <td>order_id</td> 
              <td>Product Name</td>
-             
+             <td></td>
              <td>Description</td>
              <td>price</td>
              <td>Quantity</td>
@@ -84,7 +85,7 @@
            <tr>
              <td>{{ $orders->id }}</td>
              <td>{{ $orders->product_name }}</td>
-             
+             <td><img src="{{ asset('uploads/product/' . $orders->pimage) }}" alt="image" width="200px;" height="200px;"></td>
              <td>{{ $orders->description }}</td>
              <td>{{ $orders->price }}</td>
              <td>{{ $orders->quantity }}</td>

@@ -19,16 +19,18 @@ $total=productviewController::cartItem();
           color:rgb(255, 255, 255);
           font-size:medium;
         }
-        .container1{
-    height:100%;
-    background-image: url('https://wallpapercave.com/wp/wp6751201.jpg');
+        .container{
+    
+    background: url("https://images.unsplash.com/photo-1579027989536-b7b1f875659b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fHJlc3RhdXJhbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
     background-repeat: no-repeat;
-    background-position: center ;
+    width:100%;
+    height:100vh;         
     background-size: cover;
     background-attachment: fixed;
-    
-    
+   
+               
 }
+        
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">

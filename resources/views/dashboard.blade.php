@@ -22,6 +22,36 @@
     background-size: cover;
     background-attachment: fixed;
 }
+h3{
+                position:relative;
+                font-size: 8em;
+                Letter-spacing: 15px;
+                color: #0e3742;
+                text-transform: uppercase;
+                width: 100%;
+                text-align: center;
+                -webkit-box-reflect:below 1px linear-gradient(transparent,#0004);
+                outline:none;
+                Line-height:0.70em;
+                animation:animate 3s linear infinite;
+
+            }
+            @keyframes animate{
+                0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+                {
+                    color: #0e3742;
+                    text-shadow: none;
+                }
+                18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%
+                {
+                    color: #fff;
+                    text-shadow: 0 0 10px #03bcf4,
+                    0 0 20px #03bcf4,
+                    0 0 40px #03bcf4,
+                    0 0 80px #03bcf4,
+                    0 0 160px #03bcf4;
+                }
+            }
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -51,7 +81,7 @@
   <div
     class="p-5 text-center bg-image"
     style="
-      background-image: url('https://wallpapercave.com/wp/wp6751201.jpg');
+      background-image: url('https://images.unsplash.com/photo-1426260193283-c4daed7c2024?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80');
       height: 700px;
       background-repeat: no-repeat;
       background-position: centre ;
@@ -63,8 +93,8 @@
     <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
       <div class="d-flex justify-content-center align-items-center h-100">
         <div class="text-white">
-          <h1 class="mb-3">WELCOME</h1>
-          
+          <h1 class="mb-3">WELCOME <br>TO</h1>
+          <h3><b>BREAK O'CLOCK</b></h3>
           <a class="btn btn-outline-light btn-lg" href="{{ route('productviews.index') }}" role="button"
             >Order Now</a
           >
