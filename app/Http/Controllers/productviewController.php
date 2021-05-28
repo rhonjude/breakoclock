@@ -23,7 +23,7 @@ class productviewController extends Controller
     public function index()
     {
         $catlist=DB::table('categories')
-        ->join('products','products.cid','categories.id')
+        ->join('products','products.cid','categories.id')->get();
         $product=product::paginate(5);
         $role=Auth::user()->role;
         if($role=='1')
