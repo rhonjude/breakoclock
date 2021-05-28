@@ -153,11 +153,11 @@ class productviewController extends Controller
     function orderViewAdmin()
     {
        
-        $orders=DB::table('orders')
+        $orders=collect(DB::table('orders')
         ->join('users','orders.user_id','=','users.id')
         ->join('products','products.id','=','orders.product_id')
         ->where('orders.payment_status','=','pending')
-        ->get();
+        ->get());
        
        
 
@@ -165,6 +165,7 @@ class productviewController extends Controller
         $role=$user->role;
         if($role==1)
         {
+            dd($orders);
             return view('orderviewadmin',['orders'=>$orders]);
         }
         else
