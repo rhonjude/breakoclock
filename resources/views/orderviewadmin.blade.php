@@ -22,7 +22,7 @@
           font-size:medium;
         }
         .container{
-    background: url("https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlZnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80");
+    background: url("");
     background-repeat: no-repeat;
     background-position: center ;
     background-size: cover;
@@ -126,7 +126,7 @@
 
 
      </div>
-    </div>
+    
 
    
 
