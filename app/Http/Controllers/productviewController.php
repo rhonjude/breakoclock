@@ -191,6 +191,14 @@ class productviewController extends Controller
         ->delete();
         return redirect('/orderviewadmin');
     }
+
+    function orderDelete($id)
+    {
+        DB::table('orders')
+        ->where('orders.id',$id)
+        ->delete();
+        return redirect('/completedorders');
+    }
     
     function completedOrders()
     {

@@ -117,7 +117,7 @@
            
             
              
-             <td><a href="/ordercancel/{{$orders->id}}" class ="btn btn-danger" >Delete</a></td>
+             <td><a href="/orderdelete/{{$orders->id}}" class ="btn btn-danger" >Delete</a></td>
              
           
            </tr>

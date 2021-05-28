@@ -47,7 +47,7 @@ Route::get("orderviewadmin",[productviewController::class,'orderViewAdmin']);
 Route::get("paymentstatus/{id}",[productviewController::class,'paymentStatus']);
 Route::get("ordercancel/{id}",[productviewController::class,'orderCancel']);
 Route::get("completedorders",[productviewController::class,'completedOrders']);
-
+Route::get("orderdelete/{id}",[productviewController::class,'orderDelete']);
 });
 
 });
