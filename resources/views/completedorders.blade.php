@@ -61,8 +61,9 @@
 </head>
 <body>
     <div class="container">
-    
-       <div class="row">
+      
+       <div class="row"> 
+          
            <div class="col col-12 col-sm-11 col-md-11 col-lg-11 col-xl-11 col-xxl-11">
 
 
@@ -89,6 +90,7 @@
              <td>product</td>
              <td>quantity</td>
              <td>Amount</td>
+             <td>OrderDate</td>
              
              <td></td>
             
@@ -104,7 +106,8 @@
              <td>{{ $orders->payment_status }}</td>
              <td>{{ $orders->product_name }}</td>  
              <td>{{ $orders->quantity }}</td>   
-             <td>{{ $orders->quantity * $orders->price  }}</td>       
+             <td>{{ $orders->quantity * $orders->price  }}</td> 
+             <td>{{$date}}</td>      
              
              
              

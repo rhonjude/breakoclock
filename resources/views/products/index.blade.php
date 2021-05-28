@@ -90,8 +90,8 @@
            @foreach ($product as $product)
            <tr>
              <td>{{ $product->id }}</td>
-             <td><img src="{{ asset('uploads/product/' . $product->pimage) }}" alt="image" width="200px;" height="200px;"></td>
-             <td>{{ $product->product_name }}</td>
+             
+             <td>{{ $product->product_name }}</td><td><img src="{{ asset('uploads/product/' . $product->pimage) }}" alt="image" width="200px;" height="200px;"></td>
              @foreach($catlist as $item)   
              <td>{{ $item->cname }}</td>
              @endforeach
