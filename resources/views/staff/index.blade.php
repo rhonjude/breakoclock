@@ -25,7 +25,7 @@
         
             .container{
     
-    background: url("https://wallpaperaccess.com/full/1595952.jpg");
+    background: url("https://images.unsplash.com/photo-1590991829546-0fdf9d6d79f9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
     background-repeat: no-repeat;
     width:100%;
     height:100vh;         
@@ -54,7 +54,7 @@
             <a class="nav-link" href="{{ route('categories.index') }}">Category</a>
             <a class="nav-link" href="{{ route('products.index') }}">Product</a>
             <a class="nav-link" href="/orderviewadmin">Orders</a>
-            <a class="nav-link" href="">Report</a>
+            
            
 
             

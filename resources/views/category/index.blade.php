@@ -21,6 +21,18 @@
           color:rgb(255, 255, 255);
           font-size:medium;
         }
+
+        .container{
+    
+    background: url("https://images.unsplash.com/photo-1505826759037-406b40feb4cd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80");
+    background-repeat: no-repeat;
+    width:100%;
+    height:100vh;         
+    background-size: cover;
+    background-attachment: fixed;
+   
+               
+}
         
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
@@ -39,7 +51,7 @@
             <a class="nav-link" href="{{ route('categories.index') }}">Category</a>
             <a class="nav-link" href="{{ route('products.index') }}">Product</a>
             <a class="nav-link" href="/orderviewadmin">Orders</a>
-            <a class="nav-link" href="">Report</a>
+            
            
 
             

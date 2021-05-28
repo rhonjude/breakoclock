@@ -46,7 +46,7 @@
             <a class="nav-link" href="{{ route('categories.index') }}">Category</a>
             <a class="nav-link" href="{{ route('products.index') }}">Product</a>
             <a class="nav-link" href="/orderviewadmin">Orders</a>
-            <a class="nav-link" href="">Report</a>
+            
            
 
             
