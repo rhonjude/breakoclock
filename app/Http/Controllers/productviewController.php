@@ -211,7 +211,7 @@ class productviewController extends Controller
         $role=$user->role;
         if($role==1)
         {
-            return view('completedorders',['orders'=>$orders],['total'=>$total],compact('date'));
+            return view('completedorders',['orders'=>$orders],['total'=>$total],['date'=>$date]);
         }
         else
         {
