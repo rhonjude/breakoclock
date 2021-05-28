@@ -203,15 +203,14 @@ class productviewController extends Controller
         ->where('orders.payment_status','=','paid')
         ->sum(DB::raw('products.price * orders.quantity'));
 
-        $date=DB::table('orders')->select('orders.created_at')
-        ->where('orders.payment_status','=','paid')->first();
+     
         
 
         $user=auth()->user();
         $role=$user->role;
         if($role==1)
         {
-            return view('completedorders',['orders'=>$orders],['total'=>$total],['date'=>$date]);
+            return view('completedorders',['orders'=>$orders],['total'=>$total]);
         }
         else
         {

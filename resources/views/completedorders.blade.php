@@ -90,7 +90,7 @@
              <td>product</td>
              <td>quantity</td>
              <td>Amount</td>
-             <td>OrderDate</td>
+             
              
              <td></td>
             
@@ -107,7 +107,7 @@
              <td>{{ $orders->product_name }}</td>  
              <td>{{ $orders->quantity }}</td>   
              <td>{{ $orders->quantity * $orders->price  }}</td> 
-             <td>{{$date}}</td>      
+                  
              
              
              
