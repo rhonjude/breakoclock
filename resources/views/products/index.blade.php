@@ -36,7 +36,7 @@
             
             <a class="nav-link" href="/redirects">Home</a>
             <a class="nav-link" href="{{ route('staffs.index') }}">Staffs</a>
-            <a class="nav-link" href="{{ route('categories.index') }}">product</a>
+            <a class="nav-link" href="{{ route('categories.index') }}">category</a>
             <a class="nav-link" href="{{ route('products.index') }}">Product</a>
             <a class="nav-link" href="/orderviewadmin">Orders</a>
             <a class="nav-link" href="">Report</a>
