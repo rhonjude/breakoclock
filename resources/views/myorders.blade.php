@@ -92,7 +92,7 @@
              <td>{{ $orders->price * $orders->quantity  }}</td>
              <td>{{ $orders->created_at }}</td>
              <td></td>
-             <td><a href="" class ="btn btn-success" >Order Cancel</a></td>
+             <td><a href="/customercancel/{{$orders->id}}" class ="btn btn-success" >Order Cancel</a></td>
              
              
         

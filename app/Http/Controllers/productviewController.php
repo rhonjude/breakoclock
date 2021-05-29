@@ -132,6 +132,7 @@ class productviewController extends Controller
         ->join('products','orders.product_id','=','products.id')
         ->select('orders.*','products.product_name','products.price','products.pimage')
         ->where('orders.user_id',$userId)
+        ->where('orders.payment_status','=','pending')
         ->get();
         $total= DB::table('orders')
         ->join('products','orders.product_id','=','products.id')
@@ -228,6 +229,15 @@ class productviewController extends Controller
         {
             return redirect('/dashboard');
         }
+    }
+
+    function customerCancel()
+    {
+        DB::table('orders')
+              ->where('orders.id', $id)
+              ->update(['payment_status' => 'order cancelled']);
+              
+              return redirect('/myorders');
     }
     
     
