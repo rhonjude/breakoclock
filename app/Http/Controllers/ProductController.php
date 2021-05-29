@@ -16,13 +16,17 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   $catlist=category::select('id','cname')->get();
-        $product=product::paginate(5);
+    {  // $catlist=category::select('id','cname')->get();
+        $product=DB::table('products')
+        ->join('categories','categories.id','=','products.cid')
+        ->select('products.*','categories.cname')
+        ->get();
+        //$product=product::paginate(5);
         $role=Auth::user()->role;
 
         if($role=='1')
         {
-            return view('products.index',['product'=>$product],compact('catlist'));
+            return view('products.index',['product'=>$product]);
         }
         else
         {

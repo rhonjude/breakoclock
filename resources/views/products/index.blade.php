@@ -91,10 +91,9 @@
            <tr>
              <td>{{ $product->id }}</td>
              
-             <td>{{ $product->product_name }}</td><td><img src="{{ asset('uploads/product/' . $product->pimage) }}" alt="image" width="200px;" height="200px;"></td>
-             @foreach($catlist as $item)   
-             <td>{{ $item->cname }}</td>
-             @endforeach
+             <td>{{ $product->product_name }}</td><td><img src="{{ asset('uploads/product/' . $product->pimage) }}" alt="image" width="200px;" height="200px;"></td>  
+             <td>{{ $product->cname }}</td>
+             
              <td>{{ $product->description }}</td>
              <td>{{ $product->price }}</td>
              <td>{{ $product->quantity }}</td>
