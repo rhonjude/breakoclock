@@ -123,6 +123,7 @@
            </tr>
           @endforeach
           <tr>
+          <td></td><td></td><td></td><td></td><td></td>
              <td><b>Total Sales</b></td>
              <td>{{ $total }}</td>
              </tr>
