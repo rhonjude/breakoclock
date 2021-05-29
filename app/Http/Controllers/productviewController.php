@@ -231,7 +231,7 @@ class productviewController extends Controller
         }
     }
 
-    function customerCancel()
+    function customerCancel($id)
     {
         DB::table('orders')
               ->where('orders.id', $id)
