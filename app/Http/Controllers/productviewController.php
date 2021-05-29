@@ -198,7 +198,7 @@ class productviewController extends Controller
     {
         DB::table('orders')
         ->where('orders.id',$id)
-        ->delete();
+        ->update(['payment_status' => 'order cancelled']);
         return redirect('/completedorders');
     }
     
