@@ -71,7 +71,7 @@
              <td>order_id</td> 
              <td>Product Name</td>
              <td></td>
-             <td>Description</td>
+             
              <td>price</td>
              <td>Quantity</td>
              <td>total</td>
@@ -86,12 +86,13 @@
              <td>{{ $orders->id }}</td>
              <td>{{ $orders->product_name }}</td>
              <td><img src="{{ asset('uploads/product/' . $orders->pimage) }}" alt="image" width="200px;" height="200px;"></td>
-             <td>{{ $orders->description }}</td>
+             
              <td>{{ $orders->price }}</td>
              <td>{{ $orders->quantity }}</td>
              <td>{{ $orders->price * $orders->quantity  }}</td>
              <td>{{ $orders->created_at }}</td>
-             
+             <td></td>
+             <td><a href="" class ="btn btn-success" >Order Cancel</a></td>
              
              
         
