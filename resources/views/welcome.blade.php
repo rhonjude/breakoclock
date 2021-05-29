@@ -84,6 +84,6 @@
             
         </div>
         
-        <h2 contenteditable="true"><img height="80" width="80" src="https://image.similarpng.com/very-thumbnail/2020/08/Cartoon-chef-serving-food-on-transparent-background-PNG.png">BREAK O'CLOCK</h2>
+        <h2 ><img height="80" width="80" src="https://image.similarpng.com/very-thumbnail/2020/08/Cartoon-chef-serving-food-on-transparent-background-PNG.png">BREAK O'CLOCK</h2>
     </body>
 </html>
