@@ -113,7 +113,7 @@
              
            
             
-             <td><a href="/paymentstatus/{{$orders->id}}" class ="btn btn-success" >OrderDone</a></td>
+             <td><a href="/paymentstatus/{{$orders->id}}" class ="btn btn-success" >OrderDone</a><br></td>
              <td><a href="/ordercancel/{{$orders->id}}" class ="btn btn-danger" >CancelOrder</a></td>
              
           
