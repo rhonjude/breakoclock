@@ -96,7 +96,7 @@
              
              <td>{{ $product->description }}</td>
              <td>{{ $product->price }}</td>
-             <td>{{ $product->quantity }}</td>
+             
             
         
              <td>
