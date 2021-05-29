@@ -23,7 +23,7 @@
         }
         .container{
     
-    background: url("https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80");
+    background: url("https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80");
     background-repeat: no-repeat;
     width:100%;
     height:100vh;         
@@ -61,8 +61,9 @@
 </head>
 <body>
     <div class="container">
-    
-       <div class="row">
+      
+       <div class="row"> 
+          
            <div class="col col-12 col-sm-11 col-md-11 col-lg-11 col-xl-11 col-xxl-11">
 
 
@@ -75,7 +76,7 @@
            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
            <div class="row">
            <div class="card">
-           <div class="card-header"><h4 style="float: left">Orders Pending</h4><a href="/completedorders" class ="btn btn-warning" style="float: right" >Orders Completed</a><a href="/cancelledorders" class ="btn btn-warning" style="float: right" >Orders Cancelled</a></div>
+           <div class="card-header"><h4 style="float: left">Orders Completed</h4><a href="/orderviewadmin" class ="btn btn-dark" style="float: right" >Orders Pending</a><a href="/orderviewadmin" class="button primary" onclick="window.print();" >Download Sales Report</a></div>
            <div class="card-body">
            
            <table class="table tabel-borderless table-left">
@@ -89,7 +90,8 @@
              <td>product</td>
              <td>quantity</td>
              <td>Amount</td>
-             <td></td>
+             
+             
              <td></td>
             
            </tr>
@@ -104,7 +106,8 @@
              <td>{{ $orders->payment_status }}</td>
              <td>{{ $orders->product_name }}</td>  
              <td>{{ $orders->quantity }}</td>   
-             <td>{{ $orders->quantity * $orders->price  }}</td>       
+             <td>{{ $orders->quantity * $orders->price  }}</td> 
+                  
              
              
              
@@ -113,12 +116,16 @@
              
            
             
-             <td><a href="/paymentstatus/{{$orders->id}}" class ="btn btn-success" >OrderDone</a></td>
-             <td><a href="/ordercancel/{{$orders->id}}" class ="btn btn-danger" >CancelOrder</a></td>
+             
+             <td><a href="/orderdelete/{{$orders->id}}" class ="btn btn-danger" >Delete</a></td>
              
           
            </tr>
           @endforeach
+          <tr>
+             <td><b>Total Sales</b></td>
+             <td>{{ $total }}</td>
+             </tr>
           </tbody>
           
           </table>
@@ -129,8 +136,8 @@
        </div>
 
 
-     </div>
-    
+    </div>
+
 
    
 
@@ -142,4 +149,3 @@
 </html>
     
 </x-app-layout>
-

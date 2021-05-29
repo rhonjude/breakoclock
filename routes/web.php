@@ -49,6 +49,7 @@ Route::get("ordercancel/{id}",[productviewController::class,'orderCancel']);
 Route::get("completedorders",[productviewController::class,'completedOrders']);
 Route::get("orderdelete/{id}",[productviewController::class,'orderDelete']);
 Route::get("customercancel/{id}",[productviewController::class,'customerCancel']);
+Route::get("cancelledorders",[productviewController::class,'cancelledOrders']);
 });
 
 });

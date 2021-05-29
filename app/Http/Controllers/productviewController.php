@@ -240,7 +240,32 @@ class productviewController extends Controller
               return redirect('/myorders');
     }
     
-    
+    function cancelledOrders()
+    {
+        $orders=DB::table('users')
+        ->join('orders','orders.user_id','=','users.id')
+        ->join('products','products.id','=','orders.product_id')
+        ->select('orders.*','products.product_name','products.price','users.email')
+        ->where('orders.payment_status','=','order cancelled')
+        ->get();
+       
+        $total= DB::table('orders')
+        ->join('products','orders.product_id','=','products.id')
+        ->where('orders.payment_status','=','order cancelled')
+        ->sum(DB::raw('products.price * orders.quantity'));
+
+        $user=auth()->user();
+        $role=$user->role;
+        if($role==1)
+        {
+            
+            return view('completedorders',['orders'=>$orders],['total'=>$total]);
+        }
+        else
+        {
+            return redirect('/dashboard');
+        }
+    }
   
     /**
      * Show the form for creating a new resource.
