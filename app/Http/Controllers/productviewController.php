@@ -130,7 +130,7 @@ class productviewController extends Controller
         $userId=$user->id;
         $orders= DB::table('orders')
         ->join('products','orders.product_id','=','products.id')
-        ->select('orders.*','products.product_name','products.price')
+        ->select('orders.*','products.product_name','products.price','products.pimage')
         ->where('orders.user_id',$userId)
         ->get();
         $total= DB::table('orders')
