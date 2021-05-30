@@ -72,7 +72,7 @@ class ProductController extends Controller
             $filename=time() . '.' . $extension;
             $file->move('uploads/product/',$filename);
             $product->pimage=$filename;*/
-
+            $product->pimage=$name;
         }
 
         else{
