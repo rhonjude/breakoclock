@@ -24,7 +24,7 @@ class productviewController extends Controller
     {
         $catlist=DB::table('categories')
         ->join('products','products.cid','categories.id')->first();
-        $product=product::paginate(5);
+        $product=DB::table('products')->get();
         $role=Auth::user()->role;
         if($role=='1')
         {
