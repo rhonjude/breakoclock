@@ -62,11 +62,16 @@ class ProductController extends Controller
         $product->description=$request->description;
             
         if($request->hasfile('pimage')){
-            $file=$request->file('pimage');
+         
+            $getimage=$request->file('pimage');
+            $name=$getimage->getClientOriginalName();
+            
+            $getimage->move(public_path('assets/product_img'), $name);   
+            /* $file=$request->file('pimage');
             $extension=$file->getClientOriginalExtension();//getting image extension
             $filename=time() . '.' . $extension;
             $file->move('uploads/product/',$filename);
-            $product->pimage=$filename;
+            $product->pimage=$filename;*/
 
         }
 

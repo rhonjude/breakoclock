@@ -91,7 +91,7 @@
            <tr>
              <td>{{ $product->id }}</td>
              
-             <td>{{ $product->product_name }}</td><td><img src="{{ asset('uploads/product/' . $product->pimage) }}" alt="image" width="200px;" height="200px;"></td>  
+             <td>{{ $product->product_name }}</td><td><img src="{{URL:asset('assets/product_img/' . $product->pimage) }}" alt="image" width="200px;" height="200px;"></td>  
              <td>{{ $product->cname }}</td>
              
              <td>{{ $product->description }}</td>
