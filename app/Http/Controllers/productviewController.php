@@ -27,15 +27,7 @@ class productviewController extends Controller
         $product=DB::table('products')->get();
         $role=Auth::user()->role;
         dd($catlist)
-        if($role=='1')
-        {
-            return view('admin.dashboard');
-        }
-        else
-        {
-            return view('productview.index',['product'=>$product],compact('catlist'));
-
-        }
+       
 
 
     }
