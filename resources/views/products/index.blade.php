@@ -91,7 +91,12 @@
            <tr>
              <td>{{ $product->id }}</td>
              
-             <td>{{ $product->product_name }}</td><td><img src="{{URL::asset('assets/product_img/' . $product->pimage) }}" alt="image" width="200px;" height="200px;"></td>  
+             <td>{{ $product->product_name }}</td><td><div class="card" style="width: 18rem;">
+  <img src="{{URL::asset('assets/product_img/'.$product->pimage) }}" alt="image" width="200px;" height="200px;" class="card-img-top" alt="...">
+  <div class="card-body">
+    
+  </div>
+</div></td>  
              <td>{{ $product->cname }}</td>
              
              <td>{{ $product->description }}</td>

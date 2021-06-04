@@ -88,7 +88,12 @@ $total=productviewController::cartItem();
            @foreach ($product as $product)
            <tr>
              <td>{{ $product->id }}</td>
-             <td><img src="{{URL::asset('assets/product_img/' . $product->pimage) }}" alt="image" width="200px;" height="200px;"></td>
+             <td><td><div class="card" style="width: 18rem;">
+  <img src="{{URL::asset('assets/product_img/'.$product->pimage) }}" alt="image" width="200px;" height="200px;" class="card-img-top" alt="...">
+  <div class="card-body">
+    
+  </div>
+</div></td> </td>
              <td>{{ $product->product_name }}</td>
              <td>{{$catlist->cname}}</td>
              <td>{{ $product->description }}</td>
