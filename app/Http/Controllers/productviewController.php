@@ -22,9 +22,11 @@ class productviewController extends Controller
      */
     public function index()
     {
-        $catlist=DB::table('categories')
-        ->join('products','products.cid','categories.id')->get();
-        $product=DB::table('products')->get();
+        $catlist=category::select('id','cname')->get();
+        $product=DB::table('products')
+        ->join('categories','categories.id','=','products.cid')
+        ->select('products.*','categories.cname')
+        ->get();
         $role=Auth::user()->role;
         if($role=='1')
         {
