@@ -85,7 +85,13 @@
            <tr>
              <td>{{ $orders->id }}</td>
              <td>{{ $orders->product_name }}</td>
-             <td><img src="{{ asset('uploads/product/' . $orders->pimage) }}" alt="image" width="200px;" height="200px;"></td>
+             <td><div class="card" style="width: 18rem;">
+  <img src="{{URL::asset('assets/product_img/'.$orders->pimage) }}" alt="image" width="200px;" height="200px;" class="card-img-top" alt="...">
+  <div class="card-body">
+    
+  </div>
+</div></td>
+             
              
              <td>{{ $orders->price }}</td>
              <td>{{ $orders->quantity }}</td>

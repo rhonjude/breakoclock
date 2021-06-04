@@ -77,8 +77,9 @@
            <thead>
            <tr>
              <td>#</td> 
-             <td></td>
+             
              <td>Product Name</td>
+             <td></td>
              <td>category</td>
              <td>Description</td>
              <td>price</td>
