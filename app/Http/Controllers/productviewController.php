@@ -23,11 +23,18 @@ class productviewController extends Controller
     public function index()
     {
         $catlist=DB::table('categories')
-        ->join('products','products.cid','categories.id')->first();
+        ->join('products','products.cid','categories.id')->get();
         $product=DB::table('products')->get();
         $role=Auth::user()->role;
-        dd($catlist)
-       
+        if($role=='1')
+        {
+            return view('admin.dashboard');
+        }
+        else
+        {
+            return view('productview.index',['product'=>$product],compact('catlist'));
+
+        }
 
 
     }
