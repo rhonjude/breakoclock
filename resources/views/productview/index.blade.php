@@ -77,7 +77,7 @@ $total=productviewController::cartItem();
              <td>product_id</td> 
              <td></td> 
              <td>Product Name</td>
-             <td>Category</td>
+             
              <td>Description</td>
              <td>price</td>
              <td>Quantity</td>
@@ -95,7 +95,7 @@ $total=productviewController::cartItem();
   </div>
 </div></td>
              <td>{{ $product->product_name }}</td>
-             <td>{{$product->cname}}</td>
+             
              <td>{{ $product->description }}</td>
              <td>{{ $product->price }}</td>
              
