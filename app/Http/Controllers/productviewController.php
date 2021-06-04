@@ -26,6 +26,7 @@ class productviewController extends Controller
         ->join('products','products.cid','categories.id')->first();
         $product=DB::table('products')->get();
         $role=Auth::user()->role;
+        dd($catlist)
         if($role=='1')
         {
             return view('admin.dashboard');
